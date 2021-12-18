@@ -3,14 +3,16 @@
     <meta charset="UTF-8" />
     <title>mortifiers</title>
     <link rel="stylesheet" href="" />
-    <link rel="icon" type="icon/ico" href="https://cdn.discordapp.com/attachments/833366112930365520/833791193673367612/paranoid.png />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <meta name="keywords" content="" />
+    <meta name="keywords" content=""/>
+
     <meta property="og:title" content="mortifiers" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mortifiers.net" />
     <meta property="og:image" content="https://cdn.discordapp.com/attachments/833366112930365520/833791193673367612/paranoid.png" />
     <meta property="og:description" content="home page" />
-    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.2.5/rythm.min.js"></script>
+    <script src="https://cdn.discordapp.com/attachments/856564157464707112/921559812712583188/rythms.js"></script>
     <style>
         @font-face {
          font-family: NewRocker;
@@ -93,7 +95,6 @@
       </style>
     </head>
     <body>
-
     <div id="preload">
     <p>click to enter</p>
     </div>
@@ -103,12 +104,12 @@
             <a href="https://neko.mortifiers.net"> </a>
         </div>
     <div id="main">
-    <div class="logo-bass logo-blur vanish1 pulse2">
-      <a style="display: none" href="http://web.mortifiers.net" id="logo">mortifiers</a>
+    <div class="logo-bass logo-blur vanish1 pulse2 logo-neon">
+      <a style="display: none" href="http://dash.mortifiers.net" id="logo">mortifiers</a>
     </div>
     </div>
     </div>
-    <audio id="music" class="music" src="music.mp3" autoplay loop onplaying="" style="display: none"></audio>
+    <audio id="music" class="music" src="seven.mp3" autoplay loop onplaying="" style="display: none"></audio>
     <script>
         document.getElementById("music").pause();
         document.getElementById("hidden").style = "opacity: 0; transition: 2s;";
@@ -116,10 +117,16 @@
         document.addEventListener("mousedown", handleMouseDown);
     
         function handleMouseDown() {
-          document.getElementById("music").play();
-          document.getElementById("preload").style = "opacity: 0; transition: 0.6s;";
-          document.getElementById("hidden").style = "opacity: 1; transition: 2s;";
-          document.getElementById("logo").style = "opacity: 1; transition: 2s;";
+          //setTimeout(() => {  document.getElementById("music").play(); }, 500);
+          //const myTimeout = setTimeout(songdelay, 5000);
+
+          //function songdelay() { document.getElementById("music").play(); }
+          
+          
+          //document.getElementById("music").play();
+          document.getElementById("preload").style = "opacity: 0; transition: 1s;";
+          document.getElementById("hidden").style = "opacity: 1; transition: 1s;";
+          document.getElementById("logo").style = "opacity: 1; transition: 1s;";
 
 
     
@@ -135,8 +142,11 @@
               min: 0.8,
               max: 0.9
             })
-
-
+            rythm.addRythm('borderColor1', 'borderColor', 0, 5)
+            //rythm.addRythm('logo-neon', 'neon', 0, 10, {
+           //     to: [0, 0, 0],
+           //     from: [255, 255, 255]
+           // });
 
 
 
@@ -148,4 +158,18 @@
           document.removeEventListener("mousedown", handleMouseDown);
         }
       </script>
+
+<script type="text/JavaScript">
+  //Script courtesy of BoogieJack.com
+  var message="NoRightClicking";
+  function defeatIE() {if (document.all) {(message);return false;}}
+  function defeatNS(e) {if 
+  (document.layers||(document.getElementById&&!document.all)) {
+  if (e.which==2||e.which==3) {(message);return false;}}}
+  if (document.layers) 
+  {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;}
+  else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;}
+  document.oncontextmenu=new Function("return false")
+  </script>
+
     </body>
